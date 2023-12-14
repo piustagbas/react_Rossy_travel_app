@@ -1,0 +1,170 @@
+
+:root{
+    --Primarycolour: hsl(199, 100%, 33%);
+    --SecondaryColour: hsl(178, 85%, 43%);
+    --gradientColour: linear-gradient(to right, hsl(187
+    ,85%, 43%), hsl(199, 100%, 33%));
+    --whiteColour: hsl(0, 0%, 100%);
+    --blackColour: hsl(201, 33%, 16%);
+    --textColour: hsl(240, 4%, 36%);
+    --whiteColourDeam:hsl(0, 0%, 93%);
+    --grayText: rgb(190, 190, 190);
+    --inputColour: rgb(239, 239, 239);
+    --bodyColour: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+   }
+
+   .main{
+    width: 100%;
+
+    .secTitle{
+
+        .title{
+            position: relative;
+            width: max-content;
+            color: var(--textColour);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                content: '';
+                background: var(--SecondaryColour);
+                height: 5px;
+                width: 120px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+
+    }
+    .secContent{
+        justify-content: center;
+        gap: 1.5rem;
+
+        .singleDestination{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: var(--cardBG);
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            overflow: hidden;
+
+        &:hover{
+            background: var(--cardBG);
+            box-shadow: 1px 4px 4px rgba(85, 85, 114, 0.549);
+            transition: .3s ease;
+        }
+
+        .imgDiv{
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+
+            .img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 2s ease;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cardInfo{
+            padding: 1rem;
+
+            .destTile{
+                color: var(--blackColour);
+                font-size: 1.25rem;
+            }
+
+            .continent{
+                gap: .5rem;
+
+                .icon{
+                    color: var(--textColour);
+                    font-size: 18px;
+                }
+
+                .name{
+                    color: var(--textColour);
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            .fees{
+                width: 100%;
+                justify-content: space-between;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-top: 1.5px solid var(--grayText);
+                border-bottom: 1.5px solid var(--grayText);
+
+                .grade{
+                    color: var(--textColour);
+                    max-width: 100%;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .small{
+                        text-align: center;
+                        background: var(--gradientColour);
+                        border-radius: 1rem;
+                        color: var(--whiteColour);
+                        padding: 1px 10px;
+                        font-size: 10px;
+                    }
+                }
+
+                .price{
+                    font-size: 2rem;
+                    color: var(--blackColour);
+                }
+            }
+            .desc{
+
+                font-size: 13.5px;
+                color: var(--textColour);
+                justify-content: space-between;
+                gap: .5rem;
+            }
+            
+            .btn{
+                margin-top: 1rem;
+                color: var(--whiteColour);
+                font-weight: 600;
+                justify-content: space-between;
+                gap: .5rem;
+
+                .icon{
+                    align-items: center;
+                    font-size: 18px;
+                    
+                }
+            }
+        }
+        
+        }
+        
+
+
+
+  
+
+
+    }
+
+   
+      
+   }
+
+  
