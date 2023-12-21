@@ -1,82 +1,4 @@
-/* :root{
-    --Primarycolour: hsl(199, 100%, 33%);
-    --SecondaryColour: hsl(178, 85%, 43%);
-    --gradientColour: linear-gradient(to right, hsl(187
-    ,85%, 43%), hsl(199, 100%, 33%));
-    --whiteColour: hsl(0, 0%, 100%);
-    --blackColour: hsl(201, 33%, 16%);
-    --textColour: hsl(240, 4%, 36%);
-    --whiteColourDeam:hsl(0, 0%, 93%);
-    --grayText: rgb(190, 190, 190);
-    --inputColour: rgb(239, 239, 239);
-    --bodyColour: rgb(240, 240, 246);
-    --cardBG: rgb(225, 225, 235);
-   }
 
-   .home{
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-
-   .overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(47, 106, 127 );
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    mix-blend-mode: hard-light;
-   }
-
-   video{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    object-fit: cover;
-   }
-
-
-   .homeContent{
-    width: 100%;
-    height: max-content;
-    padding: 8rem 1.5re 3rem;
-    display: flex;
-    row-gap: 3rem;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    margin: auto;
-    color: var(--whiteColour);
-
-    .textDiv{
-        padding: 2rem 0;
-
-        .smallText{
-            font-size: 13px;
-            text-transform: uppercase;
-        }
-        homeTitle{
-            position: relative;
-            font-size: 1.8rem;
-        }
-    }
-
-
-   }
-
-  
-
-
-   
-
-
-   } */
 
 
    :root{
@@ -269,3 +191,94 @@ video{
 
 
 /* MEDIA QUERIES ====================> */
+
+
+@media screen and ( min-width: 500px) {
+   
+    .home{
+        .homeContent{
+
+            .textDiv{
+                .smallText{
+                    font-size: 16px;
+                }
+
+                .homeTitle{
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background: var(--SecondaryColour);
+                        height: 5px;
+                        width: 145px;
+                        right: 0px;
+                        bottom: 5px;
+                        z-index: -1;
+
+                    }
+                }
+            }
+
+            .cardDiv{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }       
+}
+
+@media screen and ( min-width: 660px) {
+
+    .home{
+        .homeContent{
+
+            .cardDiv{
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3,1fr);
+            }
+
+        }
+    }
+}
+
+
+@media screen and ( min-width: 940px) {
+
+    .home{
+       height: 70vh;
+    }
+}
+
+
+@media screen and ( min-width: 1240px) {
+
+    .home{
+       height: 95vh;
+
+       .homeContent{
+        padding-left: 0;
+        padding-right: 0;
+
+        .cardDiv{
+            padding: 2rem 1rem;
+            grid-template-columns: repeat(3,1fr);
+            width: 1000px;
+
+            .input{
+                margin-bottom: 1rem;
+            }
+
+            .searchOptions{
+                padding: 8px 1rem;
+                bottom: -1rem;
+
+                span{
+                    font-size: 17px;
+                }
+            }
+        }
+       }
+    }
+}

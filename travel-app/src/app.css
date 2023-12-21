@@ -27,6 +27,10 @@ font-family: 'Poppins', sans-serif;
     --cardBG: rgb(225, 225, 235);
    }
 
+   html{
+    scroll-behavior: smooth;
+   }
+
   a{
     text-decoration: none;
 
@@ -97,3 +101,18 @@ font-family: 'Poppins', sans-serif;
 
   /* This is the defaul styling apply to all section */
 
+
+  @media screen and ( min-width: 1240px) {
+
+      .container{
+        width: 80% !important;
+        margin: auto !important;
+
+      }
+
+      .section{
+        padding: 6rem 0 4rem;
+      }
+
+
+  }

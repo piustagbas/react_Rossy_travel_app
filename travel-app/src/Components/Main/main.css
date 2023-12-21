@@ -78,6 +78,7 @@
 
         .cardInfo{
             padding: 1rem;
+            width: 1000px;
 
             .destTile{
                 color: var(--blackColour);

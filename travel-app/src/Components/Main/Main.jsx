@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './main.css'
 
 import img1 from '../../Assets/dubia.jpeg';
 import img2 from '../../Assets/usa.jpeg';
 import img3 from '../../Assets/paris.avif';
 import img4 from '../../Assets/gam.webp';
+import img5 from '../../Assets/can.png';
 import { IoLocationOutline } from "react-icons/io5";
 import { LuClipboardCheck } from "react-icons/lu";
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
@@ -50,15 +54,15 @@ const Data = [
     description: "Immerse yourself in the rich history and culture of Kyoto"
   },
 
-  // {
-  //   id: 5,
-  //   imgSrc: "img5.jpg",
-  //   destTitle: "Marrakech",
-  //   location: "Morocco",
-  //   grade: "Exotic Adventure",
-  //   fees: "$1100",
-  //   description: "Discover the vibrant colors and flavors of Marrakech"
-  // }
+  {
+    id: 5,
+    imgSrc: img5,
+    destTitle: "Toroto",
+    location: "Canada",
+    grade: "Exotic Adventure",
+    fees: "$1200",
+    description: "Discover the vibrant colors and flavors of Marrakech"
+  }
   
   
   
@@ -67,11 +71,16 @@ const Data = [
 ]
 
 const Main = () => {
+
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  }, [])
+
   return (
     <section className="main container section">
       <div className="secTitle">
     
-      <h3 className="title">
+      <h3 data-aos="fade-right"className="title">
         Most visited destinations
       </h3>
       </div>
@@ -83,7 +92,7 @@ const Main = () => {
             Data.map(({id, imgSrc, destTitle, location, grade, fees,
                description})=>{
                 return(
-                  <div key={id} className='singleDestination'>
+                  <div key={id}  data-aos ="fade-up" className='singleDestination'>
                       
 
                       <div className="imgDiv">
